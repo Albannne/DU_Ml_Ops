@@ -79,7 +79,7 @@ def preprocess_data(data, target_col='default', test_size=0.2, random_state=42):
     
     # Split data
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=test_size, random_state=random_state
+        X, y, test_size=test_size, random_state=random_state, stratify=y
     )
     logger.info(f"Train set: {X_train.shape}, Test set: {X_test.shape}")
     
@@ -113,7 +113,7 @@ def save_processed_data(X_train, X_test, y_train, y_test, scaler, output_dir):
     
     logger.info("All processed data saved successfully")
 
-if __name__ == "__main__":
+if __name__ == "__master__":
     # Example usage
     input_file = "data/raw/Loan_Data.csv"
     output_dir = "data/processed"
