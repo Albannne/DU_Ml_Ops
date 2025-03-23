@@ -6,7 +6,7 @@ import os
 import sys
 
 # Add src directory to path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.data.preprocess import check_missing_values, handle_outliers, preprocess_data
 
