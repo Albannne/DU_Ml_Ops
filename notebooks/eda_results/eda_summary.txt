@@ -1,0 +1,35 @@
+Dataset Shape: (10000, 8)
+
+Data Types:
+customer_id                   int64
+credit_lines_outstanding      int64
+loan_amt_outstanding        float64
+total_debt_outstanding      float64
+income                      float64
+years_employed                int64
+fico_score                    int64
+default                       int64
+dtype: object
+
+Missing Values:
+customer_id                 0
+credit_lines_outstanding    0
+loan_amt_outstanding        0
+total_debt_outstanding      0
+income                      0
+years_employed              0
+fico_score                  0
+default                     0
+dtype: int64
+
+Target Distribution:
+default
+0    8149
+1    1851
+Name: count, dtype: int64
+Target Distribution (%):
+default
+0    81.49
+1    18.51
+Name: proportion, dtype: float64
+
