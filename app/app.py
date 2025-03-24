@@ -8,18 +8,20 @@ import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load the best model
-def load_model(model_dir):
-    # Read the best model file
-    with open(f"{model_dir}/best_model.txt", 'r') as f:
+def load_model(model_file):
+    # Obtenir le répertoire du modèle à partir du chemin du fichier
+    model_dir = os.path.dirname(model_file)
+    
+    # Lire le meilleur modèle
+    with open(model_file, 'r') as f:
         best_model = f.read().strip()
     
-    # Load the model
-    model_path = f"{model_dir}/{best_model}.pkl"
+    # Construire le chemin du modèle
+    model_path = os.path.join(model_dir, f"{best_model}.pkl")
     model = joblib.load(model_path)
     
-    # Load the scaler
-    scaler_path = "data/processed/scaler.pkl"
+    # Chemin du scaler
+    scaler_path = os.path.join(os.path.dirname(os.path.dirname(model_dir)), "data/processed/scaler.pkl")
     scaler = joblib.load(scaler_path)
     
     return model, scaler, best_model
@@ -53,8 +55,9 @@ def main():
     
     try:
         # Load model and scaler
-        model_dir = "../models"
+        model_dir = './models/best_model.txt'
         model, scaler, model_name = load_model(model_dir)
+        
         
         st.sidebar.info(f"Using {model_name.replace('_', ' ').title()} model")
         
