@@ -1,0 +1,1 @@
+Dans ce projet, nous avons exploré l’application de modèles de machine learning pour la classification binaire en utilisant un pipeline de développement et d’intégration continue. L’objectif était de comprendre et mettre en pratique les différentes étapes du développement d’un modèle, de l’exploration des données à l’évaluation des performances.
