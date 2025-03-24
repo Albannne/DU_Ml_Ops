@@ -113,7 +113,7 @@ def save_processed_data(X_train, X_test, y_train, y_test, scaler, output_dir):
     
     logger.info("All processed data saved successfully")
 
-if __name__ == "__master__":
+if __name__ == "__main__":
     # Example usage
     input_file = "data/raw/Loan_Data.csv"
     output_dir = "data/processed"
