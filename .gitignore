@@ -51,3 +51,4 @@ config/credentials.yaml
 
 # AWS
 .aws/
+.DS_Store
